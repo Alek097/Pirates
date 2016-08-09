@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Exceptions\ParametrException.cs" />
     <Compile Include="Commands\HelpCommand.cs" />
     <Compile Include="Commands\Informations\InformationBuilder.cs" />
     <Compile Include="Commands\Informations\ParametrInformation.cs" />
