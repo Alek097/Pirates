@@ -26,7 +26,7 @@
 		{
 			string informationOfParametr = string.Format("{0}:{1} - {2}", this.Name, this.ValueType, this.Description);
 
-			if(this.Mandatory)
+			if(!this.Mandatory)
 			{
 				informationOfParametr = "[" + informationOfParametr + "]";
 			}

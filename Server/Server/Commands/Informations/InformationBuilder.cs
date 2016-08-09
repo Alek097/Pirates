@@ -22,7 +22,7 @@
 		{
 			string information = string.Format("Name:{0}\nDescription:\n{1}", this.Name, this.Description);
 
-			if(this.Parametrs.Length != 0)
+			if(this.Parametrs.Length > 0)
 			{
 				information += "Parametrs:\n";
 

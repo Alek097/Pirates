@@ -47,7 +47,7 @@
     <Compile Include="Commands\Informations\ParametrInformation.cs" />
     <Compile Include="Commands\ServerCommand.cs" />
     <Compile Include="Commands\Informations\ValueType.cs" />
-    <Compile Include="Parametr.cs" />
+    <Compile Include="Commands\Parametr.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
