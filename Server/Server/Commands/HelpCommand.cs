@@ -2,11 +2,15 @@
 {
 	#region Using
 	using System;
+	using Informations;
+	using Exceptions;
 	using System.Collections.Generic;
+	using System.Linq;
 	#endregion
 	class HelpCommand : ServerCommand
 	{
 		private List<ServerCommand> commands;
+		private const string line = "----------------------------------------------------";
 
 		public HelpCommand(List<ServerCommand> commands)
 		{
@@ -14,19 +18,60 @@
 			base.Name = "Help";
 		}
 
-		public override string Information()
+		protected override ParametrInformation[] Parametrs
 		{
-			return @"";
+			get
+			{
+				return new ParametrInformation[] {
+					new ParametrInformation("CommandName", "Name of commnd", Informations.ValueType.String, false)
+				};
+			}
 		}
 
-		public string LiteInformation()
+		public override InformationBuilder Information()
 		{
-			throw new NotImplementedException();
+			return new InformationBuilder(
+				this.Name,
+				"View information of commnd(s)",
+				this.Parametrs
+				);
 		}
 
-		public override void StartCommand(params string[] parametrs)
+		public override void StartCommand(params Parametr[] parametrs)
 		{
-			throw new NotImplementedException();
+			if(parametrs.Length > 0)
+			{
+				Parametr parametr = parametrs.FirstOrDefault(p => p.Name.ToLower() == "commandname");
+
+				if(parametr == null)
+				{
+					throw new ParametrException(string.Format("Parametr with name {0} not found", this.Parametrs[0].Name));
+				}
+				else
+				{
+					ServerCommand command = this.commands.FirstOrDefault(c=>c.Name == (string)parametr.Value);
+
+					if (command == null)
+					{
+						Console.ForegroundColor = ConsoleColor.Red;
+						Console.WriteLine("Command not found");
+						Console.ResetColor();
+					}
+					else
+					{
+						Console.WriteLine(line);
+						Console.WriteLine(command.Information());
+					}
+				}
+			}
+			else
+			{
+				foreach (ServerCommand command in this.commands)
+				{
+					Console.WriteLine(line);
+					Console.WriteLine(command.Information());
+				}
+			}
 		}
 	}
 }
