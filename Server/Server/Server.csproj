@@ -43,7 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\HelpCommand.cs" />
+    <Compile Include="Commands\Informations\InformationBuilder.cs" />
+    <Compile Include="Commands\Informations\ParametrInformation.cs" />
     <Compile Include="Commands\ServerCommand.cs" />
+    <Compile Include="Commands\Informations\ValueType.cs" />
+    <Compile Include="Parametr.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
