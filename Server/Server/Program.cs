@@ -1,16 +1,27 @@
 ﻿namespace Server
 {
 	#region Using
-	using System;
 	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
-	using System.Threading.Tasks;
+	using Commands;
+	using System;
 	#endregion
 	class Program
 	{
+		static List<ServerCommand> serverCommands = new List<ServerCommand>();
 		static void Main(string[] args)
 		{
+			AddCommands();
+
+			while(true)
+			{
+				string command = Console.ReadLine();
+
+			}
+		}
+
+		static void AddCommands()
+		{
+			serverCommands.Add(new HelpCommand(serverCommands));
 		}
 	}
 }
