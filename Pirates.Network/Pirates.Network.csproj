@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{17D21355-7F8F-4EFC-80FC-EE2B85708363}</ProjectGuid>
+    <ProjectGuid>{ECA423BB-06FF-4217-8765-9C2B0FA90F59}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pirates.Model</RootNamespace>
-    <AssemblyName>Pirates.Model</AssemblyName>
+    <RootNamespace>Pirates.Network</RootNamespace>
+    <AssemblyName>Pirates.Network</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pirates.Model\Pirates.Model.csproj">
+      <Project>{17d21355-7f8f-4efc-80fc-ee2b85708363}</Project>
+      <Name>Pirates.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
