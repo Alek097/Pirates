@@ -1,20 +1,20 @@
 ﻿namespace Server.Commands
 {
-	interface IServerCommand
+	abstract class ServerCommand
 	{
 		/// <summary>
 		/// Имя команды
 		/// </summary>
-		string Name { get; }
+		public string Name { get; protected set; }
 		/// <summary>
 		/// Запуск команды
 		/// </summary>
-		void StartCommand(params string[] parametrs);
+		public abstract void StartCommand(params string[] parametrs);
 		/// <summary>
 		/// Возвращает информацию о команде
 		/// </summary>
 		/// <returns>Информация о команде</returns>
-		string Information();
+		public abstract string Information();
 
 	}
 }
