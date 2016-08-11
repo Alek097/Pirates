@@ -16,6 +16,10 @@
 			{
 				string command = Console.ReadLine();
 
+				if(command.ToLower() =="exit")
+				{
+					break;
+				}
 			}
 		}
 
