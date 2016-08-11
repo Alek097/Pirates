@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\Exceptions\ParameterException.cs" />
+    <Compile Include="Commands\Exceptions\ServerCommandException.cs" />
+    <Compile Include="Commands\Exceptions\ServerException.cs" />
     <Compile Include="Commands\HelpCommand.cs" />
     <Compile Include="Commands\Informations\InformationBuilder.cs" />
     <Compile Include="Commands\Informations\ParameterInformation.cs" />
