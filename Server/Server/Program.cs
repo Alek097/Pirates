@@ -26,6 +26,7 @@
 		static void AddCommands()
 		{
 			serverCommands.Add(new HelpCommand(serverCommands));
+			serverCommands.Add(new StartCommand());
 		}
 	}
 }

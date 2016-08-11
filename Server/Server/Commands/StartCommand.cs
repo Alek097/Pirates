@@ -5,17 +5,22 @@ namespace Server.Commands
 {
 	class StartCommand : ServerCommand
 	{
+		private ParametrInformation[] parametrs = new ParametrInformation[0];
 		protected override ParametrInformation[] Parametrs
 		{
 			get
 			{
-				throw new NotImplementedException();
+				return parametrs;
 			}
 		}
 
 		public override InformationBuilder Information()
 		{
-			throw new NotImplementedException();
+			return new InformationBuilder(
+				"Start",
+				"Starting server",
+				this.Parametrs
+				);
 		}
 
 		public override void Start(params Parametr[] parametrs)
