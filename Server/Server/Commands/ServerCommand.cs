@@ -12,7 +12,7 @@
 		/// <summary>
 		/// Возможные и обязательные входящие парметры
 		/// </summary>
-		protected abstract ParametrInformation[] Parametrs { get; }
+		protected abstract ParametrInformation[] Parameters { get; }
 		/// <summary>
 		/// Запуск команды
 		/// </summary>

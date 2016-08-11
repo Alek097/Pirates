@@ -19,7 +19,7 @@
 			base.Name = "Help";
 		}
 
-		protected override ParametrInformation[] Parametrs
+		protected override ParametrInformation[] Parameters
 		{
 			get
 			{
@@ -32,7 +32,7 @@
 			return new InformationBuilder(
 				this.Name,
 				"View information of commnd(s)",
-				this.Parametrs
+				this.Parameters
 				);
 		}
 
@@ -44,7 +44,7 @@
 
 				if (parametr == null)
 				{
-					throw new ParametrException(string.Format("Parametr with name {0} not found", this.Parametrs[0].Name));
+					throw new ParametrException(string.Format("Parametr with name {0} not found", this.Parameters[0].Name));
 				}
 				else
 				{

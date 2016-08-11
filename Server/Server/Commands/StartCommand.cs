@@ -6,7 +6,7 @@ namespace Server.Commands
 	class StartCommand : ServerCommand
 	{
 		private ParametrInformation[] parametrs = new ParametrInformation[0];
-		protected override ParametrInformation[] Parametrs
+		protected override ParametrInformation[] Parameters
 		{
 			get
 			{
@@ -19,7 +19,7 @@ namespace Server.Commands
 			return new InformationBuilder(
 				"Start",
 				"Starting server",
-				this.Parametrs
+				this.Parameters
 				);
 		}
 
