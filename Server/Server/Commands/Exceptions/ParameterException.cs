@@ -3,7 +3,7 @@
 	#region Using
 	using System;
 	#endregion
-	class ParametrException : Exception
+	class ParameterException : Exception
 	{
 		public override string StackTrace
 		{
@@ -13,7 +13,7 @@
 			}
 		}
 
-		public ParametrException(string message) :
+		public ParameterException(string message) :
 			base(message)
 		{
 			

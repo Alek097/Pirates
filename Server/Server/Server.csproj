@@ -42,13 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\Exceptions\ParametrException.cs" />
+    <Compile Include="Commands\Exceptions\ParameterException.cs" />
     <Compile Include="Commands\HelpCommand.cs" />
     <Compile Include="Commands\Informations\InformationBuilder.cs" />
-    <Compile Include="Commands\Informations\ParametrInformation.cs" />
+    <Compile Include="Commands\Informations\ParameterInformation.cs" />
     <Compile Include="Commands\ServerCommand.cs" />
     <Compile Include="Commands\Informations\ValueType.cs" />
-    <Compile Include="Commands\Parametr.cs" />
+    <Compile Include="Commands\Parameter.cs" />
     <Compile Include="Commands\StartCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

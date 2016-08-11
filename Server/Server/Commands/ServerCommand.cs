@@ -12,11 +12,11 @@
 		/// <summary>
 		/// Возможные и обязательные входящие парметры
 		/// </summary>
-		protected abstract ParametrInformation[] Parameters { get; }
+		protected abstract ParameterInformation[] Parameters { get; }
 		/// <summary>
 		/// Запуск команды
 		/// </summary>
-		public abstract void Start(params Parametr[] parametrs);
+		public abstract void Start(params Parameter[] parameters);
 		/// <summary>
 		/// Возвращает информацию о команде
 		/// </summary>

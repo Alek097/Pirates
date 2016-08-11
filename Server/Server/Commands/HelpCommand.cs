@@ -10,7 +10,7 @@
 	class HelpCommand : ServerCommand
 	{
 		private List<ServerCommand> commands;
-		private ParametrInformation[] parametrs = new ParametrInformation[] { new ParametrInformation("CommandName", "Name of commnd", Informations.ValueType.String, false) };
+		private ParameterInformation[] parameters = new ParameterInformation[] { new ParameterInformation("CommandName", "Name of commnd", Informations.ValueType.String, false) };
 		private const string line = "----------------------------------------------------";
 
 		public HelpCommand(List<ServerCommand> commands)
@@ -19,11 +19,11 @@
 			base.Name = "Help";
 		}
 
-		protected override ParametrInformation[] Parameters
+		protected override ParameterInformation[] Parameters
 		{
 			get
 			{
-				return this.parametrs;
+				return this.parameters;
 			}
 		}
 
@@ -36,19 +36,19 @@
 				);
 		}
 
-		public override void Start(params Parametr[] parametrs)
+		public override void Start(params Parameter[] parameters)
 		{
-			if (parametrs.Length > 0)
+			if (parameters.Length > 0)
 			{
-				Parametr parametr = parametrs.FirstOrDefault(p => p.Name.ToLower() == "commandname");
+				Parameter parameter = parameters.FirstOrDefault(p => p.Name.ToLower() == "commandname");
 
-				if (parametr == null)
+				if (parameter == null)
 				{
-					throw new ParametrException(string.Format("Parametr with name {0} not found", this.Parameters[0].Name));
+					throw new ParameterException(string.Format("Parameter with name {0} not found", this.Parameters[0].Name));
 				}
 				else
 				{
-					ServerCommand command = this.commands.FirstOrDefault(c => c.Name == (string)parametr.Value);
+					ServerCommand command = this.commands.FirstOrDefault(c => c.Name == (string)parameter.Value);
 
 					if (command == null)
 					{

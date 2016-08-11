@@ -1,6 +1,6 @@
 ﻿namespace Server.Commands.Informations
 {
-	class ParametrInformation
+	class ParameterInformation
 	{
 		public string Name { get; private set; }
 		public ValueType ValueType { get; private set; }
@@ -8,13 +8,13 @@
 		public bool Mandatory { get; private set; }
 
 		/// <summary>
-		/// Строит объект ParametrInformation
+		/// Строит объект ParameterInformation
 		/// </summary>
 		/// <param name="name">Имя параметра</param>
 		/// <param name="description">Описание параметра</param>
 		/// <param name="valueType">Тип параметра</param>
 		/// <param name="mandatory">Определяет является ли этот парметр обязательным</param>
-		public ParametrInformation(string name, string description, ValueType valueType,bool mandatory)
+		public ParameterInformation(string name, string description, ValueType valueType,bool mandatory)
 		{
 			this.Name = name;
 			this.ValueType = valueType;
@@ -24,14 +24,14 @@
 
 		public override string ToString()
 		{
-			string informationOfParametr = string.Format("{0}:{1} - {2}", this.Name, this.ValueType, this.Description);
+			string informationOfParameter = string.Format("{0}:{1} - {2}", this.Name, this.ValueType, this.Description);
 
 			if(!this.Mandatory)
 			{
-				informationOfParametr = "[" + informationOfParametr + "]";
+				informationOfParameter = "[" + informationOfParameter + "]";
 			}
 
-			return informationOfParametr;
+			return informationOfParameter;
 		}
 	}
 }

@@ -5,12 +5,12 @@ namespace Server.Commands
 {
 	class StartCommand : ServerCommand
 	{
-		private ParametrInformation[] parametrs = new ParametrInformation[0];
-		protected override ParametrInformation[] Parameters
+		private ParameterInformation[] parameters = new ParameterInformation[0];
+		protected override ParameterInformation[] Parameters
 		{
 			get
 			{
-				return parametrs;
+				return parameters;
 			}
 		}
 
@@ -23,7 +23,7 @@ namespace Server.Commands
 				);
 		}
 
-		public override void Start(params Parametr[] parametrs)
+		public override void Start(params Parameter[] parameters)
 		{
 			throw new NotImplementedException();
 		}

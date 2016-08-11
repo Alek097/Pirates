@@ -3,13 +3,13 @@
 	#region Using
 	using System;
 	#endregion
-	class Parametr
+	class Parameter
 	{
 		public string Name { get; set; }
 		public object Value { get; set; }
 		public Type ValueType { get; set; }
 
-		public Parametr(string name, string value)
+		public Parameter(string name, string value)
 		{
 			this.Name = name;
 
