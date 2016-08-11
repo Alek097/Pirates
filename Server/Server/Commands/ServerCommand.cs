@@ -16,7 +16,7 @@
 		/// <summary>
 		/// Запуск команды
 		/// </summary>
-		public abstract void StartCommand(params Parametr[] parametrs);
+		public abstract void Start(params Parametr[] parametrs);
 		/// <summary>
 		/// Возвращает информацию о команде
 		/// </summary>

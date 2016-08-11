@@ -36,7 +36,7 @@
 				);
 		}
 
-		public override void StartCommand(params Parametr[] parametrs)
+		public override void Start(params Parametr[] parametrs)
 		{
 			if (parametrs.Length > 0)
 			{

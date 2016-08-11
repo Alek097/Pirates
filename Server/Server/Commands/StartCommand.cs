@@ -18,7 +18,7 @@ namespace Server.Commands
 			throw new NotImplementedException();
 		}
 
-		public override void StartCommand(params Parametr[] parametrs)
+		public override void Start(params Parametr[] parametrs)
 		{
 			throw new NotImplementedException();
 		}
