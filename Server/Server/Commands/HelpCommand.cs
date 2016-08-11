@@ -44,7 +44,7 @@
 
 				if (parameter == null)
 				{
-					throw new ParameterException(string.Format("Parameter with name {0} not found", this.Parameters[0].Name));
+					throw new ParameterException(string.Format("The {0} is not a command parameter", parameters[0].Name), parameters[0]);
 				}
 				else
 				{
