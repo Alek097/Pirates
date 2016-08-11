@@ -13,10 +13,12 @@
 			}
 		}
 
-		public ParameterException(string message) :
-			base(message)
+		public Parameter Parameter { get; private set; }
+
+		public ParameterException(string message, Parameter parameter)
+			: base(message)
 		{
-			
+			this.Parameter = parameter;
 		}
 	}
 }
