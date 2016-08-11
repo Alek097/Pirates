@@ -44,17 +44,15 @@
 
 				if (parameter == null)
 				{
-					throw new ParameterException(string.Format("The {0} is not a command parameter", parameters[0].Name), parameters[0]);
+					throw new ParameterException(string.Format("The {0} is not a command parameter.", parameters[0].Name), parameters[0]);
 				}
 				else
 				{
-					ServerCommand command = this.commands.FirstOrDefault(c => c.Name == (string)parameter.Value);
+					ServerCommand command = this.commands.FirstOrDefault(c => c.Name.ToLower() == ((string)parameter.Value).ToLower());
 
 					if (command == null)
 					{
-						Console.ForegroundColor = ConsoleColor.Red;
-						Console.WriteLine("Command not found");
-						Console.ResetColor();
+						throw new ParameterException(string.Format("The command {0} is not found.", parameter.Value), parameter);
 					}
 					else
 					{

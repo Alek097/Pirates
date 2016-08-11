@@ -14,6 +14,11 @@ namespace Server.Commands
 			}
 		}
 
+		public StartCommand()
+		{
+			base.Name = "Start";
+		}
+
 		public override InformationBuilder Information()
 		{
 			return new InformationBuilder(

@@ -22,7 +22,7 @@ namespace Server.Commands.Exceptions
 
 		public override string ToString()
 		{
-			return string.Format("Type: {0}\n Message: {1}\n Stack trace:{2}", this.GetType(), base.Message, this.StackTrace);
+			return string.Format("Type: {0}\nMessage: {1}\nStack trace:{2}", this.GetType(), base.Message, this.StackTrace);
 		}
 	}
 }
