@@ -21,5 +21,9 @@
 			this.LastName = lastName;
 			this.FullName = string.Format("{0} {1}", firstName, lastName);
 		}
+		public Player()
+		{
+
+		}
 	}
 }
