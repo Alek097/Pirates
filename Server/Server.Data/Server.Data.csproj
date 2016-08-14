@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context.cs" />
+    <Compile Include="ServerDB.cs" />
     <Compile Include="Models\ShipCharacteristic.cs" />
     <Compile Include="Models\ShipCharacteristicType.cs" />
     <Compile Include="Models\NPC.cs" />

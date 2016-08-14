@@ -4,7 +4,7 @@
 	using Models;
 	using System.Data.Entity;
 	#endregion
-	public class Context : DbContext
+	public class ServerDB : DbContext
 	{
 		public DbSet<Player> Players { get; set; }
 		//public DbSet<Ship> Ships { get; set; }
