@@ -57,6 +57,7 @@
     <Compile Include="Commands\HelpCommand.cs" />
     <Compile Include="Commands\Informations\InformationBuilder.cs" />
     <Compile Include="Commands\Informations\ParameterInformation.cs" />
+    <Compile Include="Commands\Informations\PlayerInformation.cs" />
     <Compile Include="Commands\ServerCommand.cs" />
     <Compile Include="Commands\Informations\ValueType.cs" />
     <Compile Include="Commands\Parameter.cs" />
@@ -67,6 +68,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Server.Data\Server.Data.csproj">
+      <Project>{37A04E47-C70C-4722-891F-30537CA931DB}</Project>
+      <Name>Server.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
