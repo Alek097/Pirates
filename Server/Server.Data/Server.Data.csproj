@@ -55,7 +55,7 @@
     <Compile Include="Models\NPC.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Role.cs" />
-    <Compile Include="Models\Ship.cs" />
+    <Compile Include="Models\PlayerShip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
