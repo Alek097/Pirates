@@ -1,8 +1,11 @@
 ﻿namespace Server.Commands.Informations
 {
+
 	#region Using
-	using Server.Models;
+	using System;
+	using Pirates.Model;
 	#endregion
+	[Serializable]
 	class PlayerInformation
 	{
 		public string Ip { get; set; }

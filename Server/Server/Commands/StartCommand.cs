@@ -1,11 +1,13 @@
-﻿using System;
-using Server.Commands.Informations;
-
-namespace Server.Commands
+﻿namespace Server.Commands
 {
+	#region Using
+	using System.Collections.Concurrent;
+	using Server.Commands.Informations;
+	#endregion
 	class StartCommand : ServerCommand
 	{
 		private ParameterInformation[] parameters = new ParameterInformation[0];
+		private ConcurrentDictionary<>
 		protected override ParameterInformation[] Parameters
 		{
 			get
@@ -30,7 +32,7 @@ namespace Server.Commands
 
 		public override void Start(params Parameter[] parameters)
 		{
-			throw new NotImplementedException();
+			
 		}
 	}
 }

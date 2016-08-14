@@ -57,7 +57,6 @@
     <Compile Include="Commands\HelpCommand.cs" />
     <Compile Include="Commands\Informations\InformationBuilder.cs" />
     <Compile Include="Commands\Informations\ParameterInformation.cs" />
-    <Compile Include="Commands\Informations\PlayerInformation.cs" />
     <Compile Include="Commands\ServerCommand.cs" />
     <Compile Include="Commands\Informations\ValueType.cs" />
     <Compile Include="Commands\Parameter.cs" />
