@@ -7,6 +7,28 @@
 	public class ServerDB : DbContext
 	{
 		public DbSet<Player> Players { get; set; }
+
+		public async void AddAsync<T>(T entity)
+			where T : class
+		{
+			this.Entry<T>(entity).State = EntityState.Added;
+			await this.SaveChangesAsync();
+		}
+
+		public async void DeleteAsync<T>(T entity)
+		where T : class
+		{
+			this.Entry<T>(entity).State = EntityState.Deleted;
+			await this.SaveChangesAsync();
+		}
+
+		public async void UpdateAsync<T>(T entity)
+		where T : class
+		{
+			this.Entry<T>(entity).State = EntityState.Modified;
+			await this.SaveChangesAsync();
+		}
+
 		//public DbSet<Ship> Ships { get; set; }
 		//public DbSet<ShipCharacteristic> ShipCharacteristic { get; set; }
 		//public DbSet<NPC> NPC { get; set; }
