@@ -10,7 +10,7 @@
 		public string Name { get; set; }
 		public virtual Player Captain { get; set; }
 		public virtual ICollection<NPC> Team { get; set; }
-		public virtual ICollection<Characteristic> Characteristic { get; set; }
+		public virtual ICollection<ShipCharacteristic> Characteristic { get; set; }
 
 		public Ship()
 		{

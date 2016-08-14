@@ -49,8 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Characteristic.cs" />
-    <Compile Include="Models\CharacteristicType.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="Models\ShipCharacteristic.cs" />
+    <Compile Include="Models\ShipCharacteristicType.cs" />
     <Compile Include="Models\NPC.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Role.cs" />

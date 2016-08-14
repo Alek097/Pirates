@@ -1,6 +1,6 @@
 ﻿namespace Server.Models
 {
-	public enum CharacteristicType
+	public enum ShipCharacteristicType
 	{
 		/// <summary>
 		/// Паруса
