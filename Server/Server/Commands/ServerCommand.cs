@@ -16,7 +16,7 @@
 		/// <summary>
 		/// Имя команды
 		/// </summary>
-		public string Name { get; protected set; }
+		public string Name { get; private set; }
 		/// <summary>
 		/// Возможные и обязательные входящие парметры
 		/// </summary>

@@ -14,10 +14,10 @@
 
 		public HelpCommand(List<ServerCommand> commands)
 			: base(
-				  "Help",
-				  "View information of commnd(s)",
-				  new ParameterInformation[] { new ParameterInformation("CommandName", "Name of commnd", Informations.ValueType.String, false) }
-				  )
+				"Help",
+				"View information of commnd(s)",
+				new ParameterInformation[] { new ParameterInformation("CommandName", "Name of commnd", Informations.ValueType.String, false) }
+				)
 		{
 			this.commands = commands;
 		}
