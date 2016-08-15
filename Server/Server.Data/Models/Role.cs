@@ -2,8 +2,8 @@
 {
 	public enum Role
 	{
-		Administration,
-		Moderator,
-		Player
+		Administration = 3,
+		Moderator = 2,
+		Player = 1
 	}
 }

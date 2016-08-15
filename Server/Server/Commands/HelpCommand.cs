@@ -10,30 +10,16 @@
 	class HelpCommand : ServerCommand
 	{
 		private List<ServerCommand> commands;
-		private ParameterInformation[] parameters = new ParameterInformation[] { new ParameterInformation("CommandName", "Name of commnd", Informations.ValueType.String, false) };
 		private const string line = "----------------------------------------------------";
 
 		public HelpCommand(List<ServerCommand> commands)
+			: base(
+				  "Help",
+				  "View information of commnd(s)",
+				  new ParameterInformation[] { new ParameterInformation("CommandName", "Name of commnd", Informations.ValueType.String, false) }
+				  )
 		{
 			this.commands = commands;
-			base.Name = "Help";
-		}
-
-		protected override ParameterInformation[] Parameters
-		{
-			get
-			{
-				return this.parameters;
-			}
-		}
-
-		public override InformationBuilder Information()
-		{
-			return new InformationBuilder(
-				this.Name,
-				"View information of commnd(s)",
-				this.Parameters
-				);
 		}
 
 		public override void Start(params Parameter[] parameters)

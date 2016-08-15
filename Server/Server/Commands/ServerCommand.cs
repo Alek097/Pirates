@@ -5,6 +5,14 @@
 	#endregion
 	abstract class ServerCommand
 	{
+		private string description;
+		public ServerCommand(string name, string description, ParameterInformation[] parameters)
+		{
+			this.Name = name;
+			this.description = description;
+			this.Parameters = parameters;
+
+		}
 		/// <summary>
 		/// Имя команды
 		/// </summary>
@@ -12,7 +20,7 @@
 		/// <summary>
 		/// Возможные и обязательные входящие парметры
 		/// </summary>
-		protected abstract ParameterInformation[] Parameters { get; }
+		protected ParameterInformation[] Parameters { get; }
 		/// <summary>
 		/// Запуск команды
 		/// </summary>
@@ -21,7 +29,10 @@
 		/// Возвращает информацию о команде
 		/// </summary>
 		/// <returns>Информация о команде</returns>
-		public abstract InformationBuilder Information();
+		public InformationBuilder Information()
+		{
+			return new InformationBuilder(this.Name, this.description, this.Parameters);
+		}
 
 	}
 }
