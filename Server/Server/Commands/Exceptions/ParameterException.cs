@@ -10,9 +10,22 @@
 			this.Parameter = parameter;
 		}
 
+		public ParameterException(string message)
+			: base(message)
+		{
+
+		}
+
 		public override string ToString()
 		{
-			return string.Format("{0}\nParametr: {1}", base.ToString(), this.Parameter);
+			if(this.Parameter == null)
+			{
+				return base.ToString();
+			}
+			else
+			{
+				return string.Format("{0}\nParametr: {1}", base.ToString(), this.Parameter);
+			}
 		}
 	}
 }
