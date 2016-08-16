@@ -16,17 +16,37 @@
 		}
 
 		public async void DeleteAsync<T>(T entity)
-		where T : class
+			where T : class
 		{
 			this.Entry<T>(entity).State = EntityState.Deleted;
 			await this.SaveChangesAsync();
 		}
 
 		public async void UpdateAsync<T>(T entity)
-		where T : class
+			where T : class
 		{
 			this.Entry<T>(entity).State = EntityState.Modified;
 			await this.SaveChangesAsync();
+		}
+		public void Add<T>(T entity)
+			where T : class
+		{
+			this.Entry<T>(entity).State = EntityState.Added;
+			this.SaveChanges();
+		}
+
+		public void Delete<T>(T entity)
+			where T : class
+		{
+			this.Entry<T>(entity).State = EntityState.Deleted;
+			this.SaveChanges();
+		}
+
+		public void Update<T>(T entity)
+			where T : class
+		{
+			this.Entry<T>(entity).State = EntityState.Modified;
+			this.SaveChanges();
 		}
 
 		//public DbSet<Ship> Ships { get; set; }
