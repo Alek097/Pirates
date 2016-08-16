@@ -60,6 +60,7 @@
     <Compile Include="Commands\ServerCommand.cs" />
     <Compile Include="Commands\Informations\ValueType.cs" />
     <Compile Include="Commands\Parameter.cs" />
+    <Compile Include="Commands\SetRoleCommand.cs" />
     <Compile Include="Commands\StartCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +70,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Pirates.Model\Pirates.Model.csproj">
+      <Project>{17d21355-7f8f-4efc-80fc-ee2b85708363}</Project>
+      <Name>Pirates.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Server.Data\Server.Data.csproj">
       <Project>{37A04E47-C70C-4722-891F-30537CA931DB}</Project>
       <Name>Server.Data</Name>
