@@ -24,6 +24,11 @@
 			this.Role = Role.Player;
 		}
 
+		public Player()
+		{
+
+		}
+
 		public override string ToString()
 		{
 			return string.Format(
