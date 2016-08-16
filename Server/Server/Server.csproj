@@ -62,6 +62,7 @@
     <Compile Include="Commands\Parameter.cs" />
     <Compile Include="Commands\SetRoleCommand.cs" />
     <Compile Include="Commands\StartCommand.cs" />
+    <Compile Include="Commands\UserInfoCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

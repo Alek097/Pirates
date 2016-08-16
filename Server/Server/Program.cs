@@ -80,6 +80,7 @@
 			serverCommands.Add(new HelpCommand(serverCommands));
 			serverCommands.Add(new StartCommand());
 			serverCommands.Add(new SetRoleCommand());
+			serverCommands.Add(new UserInfoCommand());
 		}
 
 		static void Error(ServerException ex)
