@@ -33,8 +33,6 @@
 		{
 			return string.Format(
 @"
-
-------------------------------------
 NickName:{0};
 Full name: {1};
 E-mail:{2};
