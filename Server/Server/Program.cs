@@ -79,6 +79,7 @@
 		{
 			serverCommands.Add(new HelpCommand(serverCommands));
 			serverCommands.Add(new StartCommand());
+			serverCommands.Add(new SetRoleCommand());
 		}
 
 		static void Error(ServerException ex)

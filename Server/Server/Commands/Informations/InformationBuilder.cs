@@ -20,11 +20,11 @@
 
 		public override string ToString()
 		{
-			string information = string.Format("Name:{0}\nDescription:\n{1}", this.Name, this.Description);
+			string information = string.Format("Name:{0}\n\nDescription:\n{1}", this.Name, this.Description);
 
 			if(this.Parameters.Length > 0)
 			{
-				information += "Parameters:\n";
+				information += "\n\nParameters:\n";
 
 				foreach (ParameterInformation parameter in this.Parameters)
 				{
