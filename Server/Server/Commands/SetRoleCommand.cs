@@ -6,8 +6,7 @@
 	using Exceptions;
 	using System.Linq;
 	using Data;
-	using Pirates.Model;
-	using Models;
+	using Data.Models;
 	#endregion
 	class SetRoleCommand : ServerCommand
 	{
@@ -52,7 +51,7 @@
 				}
 				using (ServerDB db = new ServerDB())
 				{
-					Models.Player player = db.Players.FirstOrDefault(p => p.NickName == parameterUser.Value.ToString());
+					Player player = db.Players.FirstOrDefault(p => p.NickName == parameterUser.Value.ToString());
 					if(player == null)
 					{
 						throw new ServerException(string.Format("User with nickname {0} not found.", parameterUser.Value));
@@ -60,7 +59,7 @@
 					else
 					{
 						player.Role = (Role)role;
-						db.Update<Models.Player>(player);
+						db.Update(player);
 					}
 				}
 			}

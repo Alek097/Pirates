@@ -4,9 +4,9 @@
 	using System;
 	using Informations;
 	using Data;
-	using Models;
 	using System.Linq;
 	using Exceptions;
+	using Data.Models;
 	#endregion
 	class UserInfoCommand : ServerCommand
 	{

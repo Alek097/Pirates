@@ -1,4 +1,4 @@
-﻿namespace Server.Models
+﻿namespace Server.Data.Models
 {
 	#region Using
 	using System;

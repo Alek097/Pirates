@@ -1,4 +1,4 @@
-﻿namespace Server.Models
+﻿namespace Server.Data.Models
 {
 	#region Using
 	using System;
@@ -11,7 +11,8 @@
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
 		public string FullName { get; set; }
-		public virtual Role Role { get; set; }
+		public  Role Role { get; set; }
+		public Status Status { get; set; }
 
 		public Player(Pirates.Model.Player player)
 		{
