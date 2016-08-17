@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Status.cs" />
     <Compile Include="ServerDB.cs" />
     <Compile Include="Models\ShipCharacteristic.cs" />
     <Compile Include="Models\ShipCharacteristicType.cs" />
