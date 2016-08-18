@@ -38,9 +38,10 @@ NickName:{0};
 Full name: {1};
 E-mail:{2};
 Role: {3};
+Status: {4};
 ------------------------------------
 "
-			, this.NickName, this.FullName, this.Email, this.Role);
+			, this.NickName, this.FullName, this.Email, this.Role, this.Status);
 		}
 	}
 }
