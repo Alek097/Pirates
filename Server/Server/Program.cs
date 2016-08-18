@@ -81,6 +81,7 @@
 			serverCommands.Add(new StartCommand());
 			serverCommands.Add(new SetRoleCommand());
 			serverCommands.Add(new UserInfoCommand());
+			serverCommands.Add(new SetStatusCommand());
 		}
 
 		static void Error(ServerException ex)
