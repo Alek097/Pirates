@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\Exceptions\FotalServerException.cs" />
+    <Compile Include="Commands\Exceptions\FatalServerException.cs" />
     <Compile Include="Commands\Exceptions\ParameterException.cs" />
     <Compile Include="Commands\Exceptions\ServerCommandException.cs" />
     <Compile Include="Commands\Exceptions\ServerException.cs" />
