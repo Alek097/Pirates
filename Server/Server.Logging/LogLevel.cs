@@ -1,10 +1,10 @@
 ﻿namespace Server.Logging
 {
-    public enum LogLevel
-    {
+	public enum LogLevel
+	{
 		Information,
 		Warning,
 		Error,
 		Fatal
-    }
+	}
 }
