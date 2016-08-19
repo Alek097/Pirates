@@ -3,7 +3,7 @@
 	#region Using
 	using Informations;
 	#endregion
-	abstract class ServerCommand
+	public abstract class ServerCommand
 	{
 		private string description;
 		public ServerCommand(string name, string description, ParameterInformation[] parameters)

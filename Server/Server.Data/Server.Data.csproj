@@ -64,6 +64,10 @@
       <Project>{17d21355-7f8f-4efc-80fc-ee2b85708363}</Project>
       <Name>Pirates.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Server.Exceptions\Server.Exceptions.csproj">
+      <Project>{1BD9CC67-820D-4CE1-98FE-58A61A42C74E}</Project>
+      <Name>Server.Exceptions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Server.Logging\Server.Logging.csproj">
       <Project>{95bb9bf2-b855-455f-a08b-cc1e74f0e8d5}</Project>
       <Name>Server.Logging</Name>

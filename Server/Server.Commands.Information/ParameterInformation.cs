@@ -1,6 +1,6 @@
 ﻿namespace Server.Commands.Informations
 {
-	class ParameterInformation
+	public class ParameterInformation
 	{
 		public string Name { get; private set; }
 		public ValueType ValueType { get; private set; }

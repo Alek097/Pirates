@@ -4,7 +4,7 @@ namespace Server.Exceptions
 	#region Using
 	using System;
 	#endregion
-	class ServerException : Exception
+	public class ServerException : Exception
 	{
 		public override string StackTrace
 		{

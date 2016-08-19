@@ -1,6 +1,6 @@
 ﻿namespace Server.Commands.Informations
 {
-	class InformationBuilder
+	public class InformationBuilder
 	{
 		public string Name { get; set; }
 		public string Description { get; set; }

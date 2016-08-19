@@ -3,6 +3,7 @@
 	#region Using
 	using Logging;
 	using Models;
+	using Exceptions;
 	using System.Data;
 	using System.Data.Entity;
 	using System.Threading.Tasks;
@@ -63,7 +64,7 @@
 			}
 			catch (DataException ex)
 			{
-				throw new FatalServerException
+				throw new FatalServerException("Fatal error has occurred, watch the inner exception", new Log(ex, ex.Message, LogLevel.Fatal));
 			}
 		}
 

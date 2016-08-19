@@ -1,6 +1,6 @@
 ﻿namespace Server.Exceptions
 {
-	class ParameterException : ServerException
+	public class ParameterException : ServerException
 	{
 		public Parameter Parameter { get; private set; }
 

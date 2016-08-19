@@ -47,6 +47,10 @@
     <Compile Include="ServerException.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Server.Commands\Server.Commands.csproj">
+      <Project>{c5d2b336-7a63-4b2b-94af-dd617858dd2e}</Project>
+      <Name>Server.Commands</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Server.Logging\Server.Logging.csproj">
       <Project>{95bb9bf2-b855-455f-a08b-cc1e74f0e8d5}</Project>
       <Name>Server.Logging</Name>

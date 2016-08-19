@@ -3,7 +3,7 @@
 	#region Using
 	using Logging;
 	#endregion
-	class FatalServerException : ServerException
+	public class FatalServerException : ServerException
 	{
 		public new System.Exception InnerException { get; private set; }
 		public Log Log { get; private set; }

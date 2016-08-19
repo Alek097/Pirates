@@ -5,7 +5,7 @@
 	using Commands;
 	using System;
 	using System.Linq;
-	using Commands.Exceptions;
+	using Exceptions;
 	#endregion
 	class Program
 	{

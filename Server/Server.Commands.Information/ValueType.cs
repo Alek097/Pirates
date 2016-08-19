@@ -1,6 +1,6 @@
 ﻿namespace Server.Commands.Informations
 {
-	enum ValueType
+	public enum ValueType
 	{
 		/// <summary>
 		/// логическое значение

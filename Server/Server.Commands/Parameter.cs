@@ -3,7 +3,7 @@
 	#region Using
 	using System;
 	#endregion
-	class Parameter
+	public class Parameter
 	{
 		public string Name { get; set; }
 		public object Value { get; set; }

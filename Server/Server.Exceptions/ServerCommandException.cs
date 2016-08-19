@@ -1,6 +1,6 @@
 ﻿namespace Server.Exceptions
 {
-	class ServerCommandException : ServerException
+	public class ServerCommandException : ServerException
 	{
 		public string Command { get; private set; }
 

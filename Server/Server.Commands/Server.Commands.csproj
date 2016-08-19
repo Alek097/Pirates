@@ -44,6 +44,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerCommand.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Server.Commands.Information\Server.Commands.Information.csproj">
+      <Project>{49eaca60-d8ec-440c-acc0-c5e4e348e83d}</Project>
+      <Name>Server.Commands.Information</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

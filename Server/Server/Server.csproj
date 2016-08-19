@@ -68,9 +68,21 @@
       <Project>{17d21355-7f8f-4efc-80fc-ee2b85708363}</Project>
       <Name>Pirates.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Server.Commands.Information\Server.Commands.Information.csproj">
+      <Project>{49eaca60-d8ec-440c-acc0-c5e4e348e83d}</Project>
+      <Name>Server.Commands.Information</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server.Commands\Server.Commands.csproj">
+      <Project>{c5d2b336-7a63-4b2b-94af-dd617858dd2e}</Project>
+      <Name>Server.Commands</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Server.Data\Server.Data.csproj">
       <Project>{37A04E47-C70C-4722-891F-30537CA931DB}</Project>
       <Name>Server.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server.Exceptions\Server.Exceptions.csproj">
+      <Project>{1bd9cc67-820d-4ce1-98fe-58a61a42c74e}</Project>
+      <Name>Server.Exceptions</Name>
     </ProjectReference>
     <ProjectReference Include="..\Server.Logging\Server.Logging.csproj">
       <Project>{95bb9bf2-b855-455f-a08b-cc1e74f0e8d5}</Project>
