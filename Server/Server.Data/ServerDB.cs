@@ -6,7 +6,7 @@
 	#endregion
 	public class ServerDB : DbContext
 	{
-		public DbSet<Models.Player> Players { get; set; }
+		public DbSet<Player> Players { get; set; }
 
 		public async void AddAsync<T>(T entity)
 			where T : class
