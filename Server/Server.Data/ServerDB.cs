@@ -1,13 +1,14 @@
 ﻿namespace Server.Data
 {
 	#region Using
+	using Logging;
 	using Models;
 	using System.Data.Entity;
 	#endregion
 	public class ServerDB : DbContext
 	{
 		public DbSet<Player> Players { get; set; }
-
+		public DbSet<Log> Logs { get; set; }
 		public async void AddAsync<T>(T entity)
 			where T : class
 		{
@@ -55,7 +56,13 @@
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
+			modelBuilder.Entity<Log>()
+				.Property(log => log.Exception)
+				.HasColumnType("xml");
 
+			modelBuilder.Entity<Log>()
+				.Property(log => log.Level)
+				.HasColumnType("nvarchar");
 		}
 	}
 }
