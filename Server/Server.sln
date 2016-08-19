@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server.Logging", "Server.Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server.Exceptions", "Server.Exceptions\Server.Exceptions.csproj", "{1BD9CC67-820D-4CE1-98FE-58A61A42C74E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server.Commands.Information", "Server.Commands.Information\Server.Commands.Information.csproj", "{49EACA60-D8EC-440C-ACC0-C5E4E348E83D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1BD9CC67-820D-4CE1-98FE-58A61A42C74E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BD9CC67-820D-4CE1-98FE-58A61A42C74E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BD9CC67-820D-4CE1-98FE-58A61A42C74E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49EACA60-D8EC-440C-ACC0-C5E4E348E83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49EACA60-D8EC-440C-ACC0-C5E4E348E83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49EACA60-D8EC-440C-ACC0-C5E4E348E83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49EACA60-D8EC-440C-ACC0-C5E4E348E83D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

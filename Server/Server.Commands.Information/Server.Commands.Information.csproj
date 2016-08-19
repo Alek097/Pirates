@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F7DC75F5-8D33-4A58-8AC3-FA24B53D57BB}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{49EACA60-D8EC-440C-ACC0-C5E4E348E83D}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Server</RootNamespace>
-    <AssemblyName>Server</AssemblyName>
+    <RootNamespace>Server.Commands.Information</RootNamespace>
+    <AssemblyName>Server.Commands.Information</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,16 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,33 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\HelpCommand.cs" />
-    <Compile Include="Commands\ServerCommand.cs" />
-    <Compile Include="Commands\Parameter.cs" />
-    <Compile Include="Commands\SetRoleCommand.cs" />
-    <Compile Include="Commands\SetStatusCommand.cs" />
-    <Compile Include="Commands\StartCommand.cs" />
-    <Compile Include="Commands\UserInfoCommand.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="InformationBuilder.cs" />
+    <Compile Include="ParameterInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Pirates.Model\Pirates.Model.csproj">
-      <Project>{17d21355-7f8f-4efc-80fc-ee2b85708363}</Project>
-      <Name>Pirates.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Server.Data\Server.Data.csproj">
-      <Project>{37A04E47-C70C-4722-891F-30537CA931DB}</Project>
-      <Name>Server.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Server.Logging\Server.Logging.csproj">
-      <Project>{95bb9bf2-b855-455f-a08b-cc1e74f0e8d5}</Project>
-      <Name>Server.Logging</Name>
-    </ProjectReference>
+    <Compile Include="ValueType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
