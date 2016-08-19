@@ -69,5 +69,26 @@
 		{
 
 		}
+		public override string ToString()
+		{
+			return string.Format(
+@"
+Id: {0}
+Date: {1}
+Thread id: {2}
+Exception type: {3}
+Message: {4}
+Level: {5}
+Exception:
+{6}
+", 
+			this.Id,
+			this.Date,
+			this.ThreadId,
+			this.ExceptionType,
+			this.Message,
+			this.Level,
+			this.Exception);
+		}
 	}
 }
