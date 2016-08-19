@@ -3,7 +3,9 @@
 	#region Using
 	using Logging;
 	using Models;
+	using System.Data;
 	using System.Data.Entity;
+	using System.Threading.Tasks;
 	#endregion
 	public class ServerDB : DbContext
 	{
@@ -48,6 +50,21 @@
 		{
 			this.Entry<T>(entity).State = EntityState.Modified;
 			this.SaveChanges();
+		}
+		private new async Task<int> SaveChangesAsync()
+		{
+			return await base.SaveChangesAsync();
+		}
+		private new int SaveChanges()
+		{
+			try
+			{
+				return base.SaveChanges();
+			}
+			catch (DataException ex)
+			{
+				throw new FatalServerException
+			}
 		}
 
 		//public DbSet<Ship> Ships { get; set; }
