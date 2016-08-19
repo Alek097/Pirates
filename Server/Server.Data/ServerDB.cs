@@ -59,10 +59,6 @@
 			modelBuilder.Entity<Log>()
 				.Property(log => log.Exception)
 				.HasColumnType("xml");
-
-			modelBuilder.Entity<Log>()
-				.Property(log => log.Level)
-				.HasColumnType("nvarchar");
 		}
 	}
 }

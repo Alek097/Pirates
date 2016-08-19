@@ -2,6 +2,7 @@
 {
 	#region Using
 	using System;
+	using System.ComponentModel.DataAnnotations.Schema;
 	#endregion
 	public class Player
 	{
@@ -11,8 +12,63 @@
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
 		public string FullName { get; set; }
-		public  Role Role { get; set; }
-		public Status Status { get; set; }
+		[Column("Role")]
+		public string RoleString
+		{
+			get
+			{
+				return _roleString;
+			}
+			set
+			{
+				this._roleString = value;
+				this._role = (Role)Enum.Parse(typeof(Role), value);
+			}
+		}
+		[Column("Status")]
+		public string StatusString
+		{
+			get
+			{
+				return _statusString;
+			}
+			set
+			{
+				this._statusString = value;
+				this._status = (Status)Enum.Parse(typeof(Status), value);
+			}
+		}
+		[NotMapped]
+		public Role Role
+		{
+			get
+			{
+				return _role;
+			}
+			set
+			{
+				_role = value;
+				_roleString = value.ToString();
+			}
+		}
+		[NotMapped]
+		public Status Status
+		{
+			get
+			{
+				return _status;
+			}
+			set
+			{
+				_status = value;
+				_statusString = value.ToString();
+			}
+		}
+
+		private Role _role;
+		private Status _status;
+		private string _roleString;
+		private string _statusString;
 
 		public Player(Pirates.Model.Player player)
 		{

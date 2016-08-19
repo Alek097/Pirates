@@ -2,6 +2,7 @@
 {
 	#region Using
 	using System;
+	using System.ComponentModel.DataAnnotations.Schema;
 	using System.IO;
 	using System.Threading;
 	using System.Xml.Serialization;
@@ -13,8 +14,36 @@
 		public string ExceptionType { get; set; }
 		public string Exception { get; set; }
 		public int ThreadId { get; set; }
-		public LogLevel Level { get; set; }
 		public DateTime Date { get; set; }
+		[Column("Level")]
+		public string LevelString
+		{
+			get
+			{
+				return _levelString;
+			}
+			set
+			{
+				_levelString = value;
+				_level = (LogLevel)Enum.Parse(typeof(LogLevel), value);
+			}
+		}
+		[NotMapped]
+		public LogLevel Level
+		{
+			get
+			{
+				return _level;
+			}
+			set
+			{
+				_level = value;
+				_levelString = value.ToString();
+			}
+		}
+
+		private LogLevel _level;
+		private string _levelString;
 
 		public Log(System.Exception ex, string message, LogLevel logLevel)
 		{
