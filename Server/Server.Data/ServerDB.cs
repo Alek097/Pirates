@@ -54,7 +54,14 @@
 		}
 		private new async Task<int> SaveChangesAsync()
 		{
-			return await base.SaveChangesAsync();
+			try
+			{
+				return await base.SaveChangesAsync();
+			}
+			catch (DataException ex)
+			{
+				throw new FatalServerException("Fatal error has occurred, watch the inner exception", new Log(ex, ex.Message, LogLevel.Fatal));
+			}
 		}
 		private new int SaveChanges()
 		{
