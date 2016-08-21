@@ -67,8 +67,21 @@
 							serverCommand.Start(parameters.ToArray());
 						}
 					}
+					catch(FatalServerException ex)
+					{
+						Console.ForegroundColor = ConsoleColor.Red;
+						Console.WriteLine("Ftal error.");
+						Error(ex);
+						break;
+					}
 					catch (ServerException ex)
 					{
+						Error(ex);
+					}
+					catch(Exception ex)
+					{
+						Console.ForegroundColor = ConsoleColor.Red;
+						Console.WriteLine("Unknown error, see the log");
 						Error(ex);
 					}
 				}
@@ -84,7 +97,7 @@
 			serverCommands.Add(new SetStatusCommand());
 		}
 
-		static void Error(ServerException ex)
+		static void Error(Exception ex)
 		{
 			Console.WriteLine();
 			Console.ForegroundColor = ConsoleColor.Red;
