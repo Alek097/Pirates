@@ -12,10 +12,15 @@
 		{
 
 		}
-		public FatalServerException(string message, Log log , System.Exception innerEx)
+		public FatalServerException(string message, Log log, System.Exception innerEx)
 			: base(message)
 		{
 			this.Log = log;
+		}
+
+		public override string ToString()
+		{
+			return string.Format("{0}\nLog:\n{1}", base.ToString(), this.Log);
 		}
 	}
 }
