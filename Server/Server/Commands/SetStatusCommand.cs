@@ -8,11 +8,12 @@ namespace Server.Commands
 	using Exceptions;
 	using Data;
 	using Data.Models;
+	using Logging;
 	#endregion
 	class SetStatusCommand : ServerCommand
 	{
 		public SetStatusCommand()
-			:base("SetStatus",
+			: base("SetStatus",
 				 "Setting status of user",
 				 new ParameterInformation[]
 				{
@@ -59,6 +60,11 @@ namespace Server.Commands
 					{
 						player.Status = (Status)status;
 						db.Update(player);
+						db.Add<Log>(
+							new Log(
+								null,
+								string.Format("Set role of the user (Nickname:{0}; Id:{1}; Role:{2})", player.NickName, player.Id, player.Role),
+								LogLevel.Information));
 					}
 				}
 			}

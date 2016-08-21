@@ -6,6 +6,8 @@
 	using System;
 	using System.Linq;
 	using Exceptions;
+	using Data;
+	using Logging;
 	#endregion
 	class Program
 	{
@@ -67,7 +69,7 @@
 							serverCommand.Start(parameters.ToArray());
 						}
 					}
-					catch(FatalServerException ex)
+					catch (FatalServerException ex)
 					{
 						Console.ForegroundColor = ConsoleColor.Red;
 						Console.WriteLine("Ftal error.");
@@ -77,12 +79,23 @@
 					catch (ServerException ex)
 					{
 						Error(ex);
+
+						using (ServerDB db = new ServerDB())
+						{
+							db.Add<Log>(new Log(ex, ex.Message, LogLevel.Error));
+						}
 					}
-					catch(Exception ex)
+					catch (System.Exception ex)
 					{
 						Console.ForegroundColor = ConsoleColor.Red;
 						Console.WriteLine("Unknown error, see the log");
+
 						Error(ex);
+
+						using (ServerDB db = new ServerDB())
+						{
+							db.Add<Log>(new Log(ex, ex.Message, LogLevel.Error));
+						}
 					}
 				}
 			}
@@ -97,7 +110,7 @@
 			serverCommands.Add(new SetStatusCommand());
 		}
 
-		static void Error(Exception ex)
+		static void Error(System.Exception ex)
 		{
 			Console.WriteLine();
 			Console.ForegroundColor = ConsoleColor.Red;

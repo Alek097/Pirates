@@ -7,6 +7,7 @@
 	using System.Linq;
 	using Data;
 	using Data.Models;
+	using Logging;
 	#endregion
 	class SetRoleCommand : ServerCommand
 	{
@@ -45,14 +46,15 @@
 
 				int role = (int)((double)parameterRole.Value);
 
-				if(role > 3 || role < 1)
+				if (role > 3 || role < 1)
 				{
 					throw new ParameterException(string.Format("Parameter role has an invalid value {0}. 1 - Player / 2 - Moderator / 3 - Administration", role));
 				}
+
 				using (ServerDB db = new ServerDB())
 				{
 					Player player = db.Players.FirstOrDefault(p => p.NickName == parameterUser.Value.ToString());
-					if(player == null)
+					if (player == null)
 					{
 						throw new ServerException(string.Format("User with nickname {0} not found.", parameterUser.Value));
 					}
@@ -60,6 +62,11 @@
 					{
 						player.Role = (Role)role;
 						db.Update(player);
+						db.Add<Log>(
+							new Log(
+								null,
+								string.Format("Set role of the user (Nickname:{0}; Id:{1}; Role:{2})", player.NickName, player.Id, player.Role),
+								LogLevel.Information));
 					}
 				}
 			}
